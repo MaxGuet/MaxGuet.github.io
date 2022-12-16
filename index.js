@@ -30,7 +30,7 @@ let comté = document.querySelector("#comté");
 let persil = document.querySelector("#persil");
 
 rec.addEventListener("click", () => {
-  rec.style.visibility = "hidden";
+  rec.style.bottom = "15%";
   if (
     riz.checked === true &&
     oignon.checked === true &&
