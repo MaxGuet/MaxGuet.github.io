@@ -88,14 +88,23 @@ a:visited{
 
 fieldset{
     font-family: "PT serif";
-    letter-spacing: 1px;
     box-shadow: 2px 2px 3px var(--brighter);
     border: 1px solid var(--main-color);
     width : 90%;
     align-self: center;
     border-radius: 50px;
-
+    font-size: 1rem;
 }
+
+label{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+input {
+    margin-right: 4px;
+}
+
 input:hover {
     cursor: pointer;
     
