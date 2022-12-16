@@ -1,5 +1,9 @@
 const rec = document.querySelector("#receipe");
 const header = document.querySelector("header");
+const ticket = document.querySelector(".ticket");
+const ticket2 = document.querySelector(".ticket2");
+const ticket3 = document.querySelector(".ticket3");
+const ticket4 = document.querySelector(".ticket4");
 
 let pates = document.querySelector("#pates");
 let poireau = document.querySelector("#poireau");
@@ -22,10 +26,11 @@ let parmesan = document.querySelector("#parmesan");
 let vinBlanc = document.querySelector("#vinBlanc");
 let cumin = document.querySelector("#cumin");
 let muscade = document.querySelector("#muscade");
-let conté = document.querySelector("#conté");
+let comté = document.querySelector("#comté");
 let persil = document.querySelector("#persil");
 
-const cook = () => {
+rec.addEventListener("click", () => {
+  rec.style.visibility = "hidden";
   if (
     riz.checked === true &&
     oignon.checked === true &&
@@ -35,7 +40,8 @@ const cook = () => {
     parmesan.checked === true &&
     vinBlanc.checked === true
   ) {
-    console.log("Risotto aux asperges!");
+    ticket2.style.visibility = "visible";
+    ticket2.style.opacity = "1";
   }
   if (
     patates.checked === true &&
@@ -43,7 +49,8 @@ const cook = () => {
     lait.checked === true &&
     muscade.checked === true
   ) {
-    console.log("Purée!");
+    ticket.style.visibility = "visible";
+    ticket.style.opacity = "1";
   }
   if (
     riz.checked === true &&
@@ -57,22 +64,22 @@ const cook = () => {
     ail.checked === true &&
     huileOlive.checked === true
   ) {
-    console.log("Chili Con Carne!");
+    ticket3.style.visibility = "visible";
+    ticket3.style.opacity = "1";
   }
   if (
     patates.checked === true &&
     beurre.checked === true &&
-    conté.checked === true &&
+    comté.checked === true &&
     boeuf.checked === true &&
     oignon.checked === true &&
     ail.checked === true &&
     persil.checked === true
   ) {
-    console.log("Hachis Parmentier!");
+    ticket3.style.visibility = "visible";
+    ticket3.style.opacity = "1";
   }
-};
-
-cook();
+});
 
 let lastScroll = 0;
 
