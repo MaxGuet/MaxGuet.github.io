@@ -1,3 +1,7 @@
+const feculent = document.querySelector(".feculent");
+const feculentBtn = document.querySelector(".feculent-btn");
+const legume = document.querySelector(".legume");
+const legumeBtn = document.querySelector(".legume-btn");
 const rec = document.querySelector("#receipe");
 const header = document.querySelector("header");
 const ticket = document.querySelector(".ticket");
@@ -91,4 +95,20 @@ window.addEventListener("scroll", () => {
   }
 
   lastScroll = window.scrollY;
+});
+
+feculentBtn.addEventListener("click", () => {
+  let left = getComputedStyle(feculent).getPropertyValue("left");
+  console.log(left);
+  if ((feculent.style.left = "-915px")) {
+    feculent.style.left = "-100px";
+  } else if ((left = "-100px")) {
+    feculent.style.background = "#FEFEFF";
+  }
+});
+
+legumeBtn.addEventListener("click", () => {
+  if ((legume.style.left = "-915px")) {
+    legume.style.left = "-100px";
+  }
 });
