@@ -2,6 +2,9 @@ const feculent = document.querySelector(".feculent");
 const feculentBtn = document.querySelector(".feculent-btn");
 const legume = document.querySelector(".legume");
 const legumeBtn = document.querySelector(".legume-btn");
+const onion = document.querySelector(".oignon");
+const onionBtn = document.querySelector(".oignon-btn");
+
 const rec = document.querySelector("#receipe");
 const header = document.querySelector("header");
 const ticket = document.querySelector(".ticket");
@@ -97,18 +100,28 @@ window.addEventListener("scroll", () => {
   lastScroll = window.scrollY;
 });
 
+console.log(feculent.style.left);
+
 feculentBtn.addEventListener("click", () => {
-  let left = getComputedStyle(feculent).getPropertyValue("left");
-  console.log(left);
-  if ((feculent.style.left = "-915px")) {
-    feculent.style.left = "-100px";
-  } else if ((left = "-100px")) {
-    feculent.style.background = "#FEFEFF";
+  if (feculent.style.left <= "-1058px") {
+    feculent.style.left = "0px";
+  } else if (feculent.style.left == "0px") {
+    feculent.style.left = "-1058px";
   }
 });
 
 legumeBtn.addEventListener("click", () => {
-  if ((legume.style.left = "-915px")) {
-    legume.style.left = "-100px";
+  if (legume.style.left <= "-1058px") {
+    legume.style.left = "0px";
+  } else if (legume.style.left == "0px") {
+    legume.style.left = "-1058px";
+  }
+});
+
+onionBtn.addEventListener("click", () => {
+  if (onion.style.left <= "-1058px") {
+    onion.style.left = "0px";
+  } else if (onion.style.left == "0px") {
+    onion.style.left = "-1058px";
   }
 });
