@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,300&display=swap');
 
 * {
     margin: 0;
@@ -9,15 +9,15 @@
 
 :root {
     --main-color : #F8F8F9;
-    --brighter :  #099F7C;
-    --background1 : #05745A;
+    --brighter :  #30698d;
+    --background1 : #2F4858;
     --background2 : #FEFEFF;
 
 }
 
 
 header{
-    height: 40px;
+    height: 60px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -33,6 +33,10 @@ nav{
     width: 100%;
 }
 
+main{
+    background: url(./background.jpg) center/cover fixed;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -42,8 +46,9 @@ nav ul {
     font-family: "PT Serif";
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-weight: 500;
-    text-shadow: 1px 1px 1px black;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
     transition: transform 0.5s;
 }
 
@@ -53,61 +58,206 @@ li a {
     transition: 0.5s;
 }
 
-li a:hover {
-    transform: scale(1.2);
+li {
+    transition: 0.6s;
+}
+
+li:hover {
+    transform: scale(1.1);
 }
 
 a:visited{
-  color: vblack;
+  color: black;
 }
-
-
 
 
 
 .pres {
     width: 100%;
     display: grid;
-    grid-template-columns: 70% 30%;
-    padding-top: 50px;
-    
+    grid-template-columns: 30% 40% 30%;
+    padding-top: 100px;
+    opacity: 1;
 }
 
-
-.ingredients {
-    height: 100vh;
-    width: 100%;
+.flex-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-left: 50px;
+}
+
+
+.ingredients-left {
+    height: 100vh;
+    width: 100%;
     align-items: center;
-    background: var(--background2);
     border-radius: 20px;
-    margin-left: 30px;
 }
 
-fieldset{
-    font-family: "PT serif";
-    box-shadow: 2px 2px 3px var(--brighter);
-    border: 1px solid var(--main-color);
-    width : 90%;
-    align-self: center;
-    border-radius: 50px;
-    font-size: 1rem;
+.ing-container-left {
+    height: 80%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 60%;
+    background: #e3dab2;
+    left: -60%;
+    position: relative;
+    border-radius: 20px;
+    opacity: 0.9;
+    transition: 0.6s;
+    top: 0%;
+    display: flex;
+    padding-bottom: 40px;
 }
 
-label{
-    margin-left: 3px;
-    margin-right: 3px;
+.ing-container-right {
+    height: 80%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 60%;
+    background: #e3dab2;
+    left: 100%;
+    position: relative;
+    border-radius: 20px;
+    opacity: 0.9;
+    transition: 0.6s;
+    top: 30px;
+    display: flex;
+    padding-bottom: 40px;
 }
 
-input {
-    margin-right: 4px;
+.ing-btn-left{
+    content:"";
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    border-radius: 17px;
+    background:#e3dab2;
+    right: -45px;
+    writing-mode: vertical-lr;
+    text-align: center;
+    padding-left: 60px;
+    font-weight: 900;
+    font-size: 2rem;
+    transition: .5s;
 }
+
+.ing-btn-left:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.ing-btn-right {
+    content:"";
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    border-radius: 17px;
+    background:#e3dab2;
+    left: -45px;
+    writing-mode: vertical-rl;
+    text-align: center;
+    padding-right: 53px;
+    font-weight: 900;
+    font-size: 2rem;
+    transition: .5s;
+}
+
+.ing-btn-right:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.feculent {
+    top: 30px;
+}
+
+.legume {
+    top: -756px;
+    z-index: 1;
+}
+
+.legume-btn {
+    top: 150px;
+}
+
+.oignon {
+    top: -1544px;
+}
+
+.oignon-btn {
+    top: 302px;
+}
+
+
+.aromate {
+    top: -2331px;
+}
+
+.aromate-btn {
+    top: 452px;
+}
+
+
+.epice {
+    top: -3117px;
+}
+
+.epice-btn{
+    top: 602px;
+}
+
+.liquide{
+    top: 30px;
+    left: 100%;
+}
+
+
+.liquide-btn{
+    
+    top: 0px;
+}
+
+
+.gras {
+    top: -756px;
+}
+
+.gras-btn {
+    top: 150px;
+}
+
+
+.viande {
+    top: -1543px;
+}
+
+.viande-btn {
+    top: 453px;
+}
+
+.fromage{
+    top: -2330px;
+}
+
+.fromage-btn {
+    top: 603px;
+}
+
 
 input:hover {
     cursor: pointer;
-    
+}
+
+input[type=checkbox] {
+    transform: scale(1.4);
+}
+
+label{
+    font-family: 'Chivo Mono', monospace;
+    font-style: italic;
+    font-size: 1.5rem;
 }
 
 .recette {
@@ -123,10 +273,14 @@ input:hover {
     gap: 10px;
     padding-top: 20px;
     position: relative;
+    top: -150px;
     
 }
 
 .ticket, .ticket2, .ticket3, .ticket4{
+    position: absolute;
+    top: -150px;
+    left: 680px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -154,14 +308,13 @@ input:hover {
     box-shadow: 10px 10px 10px var(--brighter);
  }
 
+ .ticket2{
+    background: url(./risotto.jpg) center/cover;
+ }
 ol {
     margin: 10px;
     line-height: 25px;
 }
-Legend{
-    font-weight: 800;
-}
-
 
 footer{
     display: flex;
@@ -169,13 +322,13 @@ footer{
     align-items: center;
 }
 button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 130px;
     height: 130px;
     border-radius: 70px;
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    right: 120px;
     font-family: "PT serif";
     letter-spacing: 1px;
     box-shadow: 2px 2px 3px var(--brighter);
@@ -186,6 +339,4 @@ button{
 button:hover {
     cursor: pointer;
     box-shadow: 5px 5px 4px var(--brighter);
-
-
 }

@@ -1,3 +1,26 @@
+const ingBtnLeft = document.querySelector(".ing-btn-left");
+const ingBtnRight = document.querySelector(".ing-btn-right");
+const ingContainerLeft = document.querySelector(".ing-container-left");
+const ingContainerRight = document.querySelector(".ing-container-right");
+const feculentBtn = document.querySelector(".feculent-btn");
+const feculent = document.querySelector(".feculent");
+const legume = document.querySelector(".legume");
+const legumeBtn = document.querySelector(".legume-btn");
+const onion = document.querySelector(".oignon");
+const onionBtn = document.querySelector(".oignon-btn");
+const aromate = document.querySelector(".aromate");
+const aromateBtn = document.querySelector(".aromate-btn");
+const epice = document.querySelector(".epice");
+const epiceBtn = document.querySelector(".epice-btn");
+const liquide = document.querySelector(".liquide");
+const liquideBtn = document.querySelector(".liquide-btn");
+const gras = document.querySelector(".gras");
+const grasBtn = document.querySelector(".gras-btn");
+const viande = document.querySelector(".viande");
+const viandeBtn = document.querySelector(".viande-btn");
+const fromage = document.querySelector(".fromage");
+const fromageBtn = document.querySelector(".fromage-btn");
+
 const rec = document.querySelector("#receipe");
 const header = document.querySelector("header");
 const ticket = document.querySelector(".ticket");
@@ -30,7 +53,11 @@ let comté = document.querySelector("#comté");
 let persil = document.querySelector("#persil");
 
 rec.addEventListener("click", () => {
-  rec.style.visibility = "hidden";
+  if (rec.style.top == "90%") {
+    rec.style.top = "50%";
+  } else {
+    rec.style.top = "90%";
+  }
   if (
     riz.checked === true &&
     oignon.checked === true &&
@@ -42,6 +69,7 @@ rec.addEventListener("click", () => {
   ) {
     ticket2.style.visibility = "visible";
     ticket2.style.opacity = "1";
+    ticket2.style.top = "-950px";
   }
   if (
     patates.checked === true &&
@@ -51,6 +79,7 @@ rec.addEventListener("click", () => {
   ) {
     ticket.style.visibility = "visible";
     ticket.style.opacity = "1";
+    ticket.style.top = "-950px";
   }
   if (
     riz.checked === true &&
@@ -91,4 +120,76 @@ window.addEventListener("scroll", () => {
   }
 
   lastScroll = window.scrollY;
+});
+
+feculentBtn.addEventListener("click", () => {
+  if (feculent.style.left <= "-60%") {
+    feculent.style.left = "30%";
+  } else if (feculent.style.left <= "30%") {
+    feculent.style.left = "-60%";
+  }
+});
+
+legumeBtn.addEventListener("click", () => {
+  if (legume.style.left <= "-60%") {
+    legume.style.left = "30%";
+  } else if (legume.style.left <= "30%") {
+    legume.style.left = "-60%";
+  }
+});
+
+onionBtn.addEventListener("click", () => {
+  if (onion.style.left <= "-60%") {
+    onion.style.left = "30%";
+  } else if (onion.style.left <= "30%") {
+    onion.style.left = "-60%";
+  }
+});
+
+aromateBtn.addEventListener("click", () => {
+  if (aromate.style.left <= "-60%") {
+    aromate.style.left = "30%";
+  } else if (aromate.style.left == "30%") {
+    aromate.style.left = "-60%";
+  }
+});
+
+epiceBtn.addEventListener("click", () => {
+  if (epice.style.left <= "-60%") {
+    epice.style.left = "30%";
+  } else if (epice.style.left == "30%") {
+    epice.style.left = "-60%";
+  }
+});
+
+liquideBtn.addEventListener("click", () => {
+  if (liquide.style.left <= "100%") {
+    liquide.style.left = "9%";
+  } else if (liquide.style.left == "9%") {
+    liquide.style.left = "100%";
+  }
+});
+
+grasBtn.addEventListener("click", () => {
+  if (gras.style.left <= "100%") {
+    gras.style.left = "9%";
+  } else if (gras.style.left == "9%") {
+    gras.style.left = "100%";
+  }
+});
+
+viandeBtn.addEventListener("click", () => {
+  if (viande.style.left <= "100%") {
+    viande.style.left = "9%";
+  } else if (viande.style.left == "9%") {
+    viande.style.left = "100%";
+  }
+});
+
+fromageBtn.addEventListener("click", () => {
+  if (fromage.style.left <= "100%") {
+    fromage.style.left = "9%";
+  } else if (fromage.style.left == "9%") {
+    fromage.style.left = "100%";
+  }
 });
