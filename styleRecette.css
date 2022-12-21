@@ -53,6 +53,7 @@ nav a:hover {
 
 main{
     background: url(./backgroundRecette.jpg) fixed;
+    background-position-x: 50%;
     height: 100vh;
     width: 100vw;
     display: flex;
