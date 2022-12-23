@@ -33,10 +33,6 @@ nav{
     width: 100%;
 }
 
-main{
-    background: url(./background.jpg) center/cover fixed;
-}
-
 nav ul {
     list-style: none;
     display: flex;
@@ -73,11 +69,15 @@ a:visited{
 
 
 .pres {
+    background: url(./background.jpg) center/cover fixed;
     width: 100%;
     display: grid;
     grid-template-columns: 30% 40% 30%;
     padding-top: 100px;
-    opacity: 1;
+}
+
+.ingredients-left {
+    height: 100vh;
 }
 
 .flex-container {
@@ -88,17 +88,9 @@ a:visited{
 }
 
 
-.ingredients-left {
-    height: 100vh;
-    width: 100%;
-    align-items: center;
-    border-radius: 20px;
-}
 
 .ing-container-left {
     height: 80%;
-    display: grid;
-    grid-template-columns: 70% 30%;
     width: 60%;
     background: #e3dab2;
     left: -60%;
@@ -108,13 +100,10 @@ a:visited{
     transition: 0.6s;
     top: 0%;
     display: flex;
-    padding-bottom: 40px;
 }
 
 .ing-container-right {
     height: 80%;
-    display: grid;
-    grid-template-columns: 30% 70%;
     width: 60%;
     background: #e3dab2;
     left: 100%;
@@ -124,11 +113,9 @@ a:visited{
     transition: 0.6s;
     top: 30px;
     display: flex;
-    padding-bottom: 40px;
 }
 
 .ing-btn-left{
-    content:"";
     position: absolute;
     width: 100px;
     height: 150px;
@@ -148,8 +135,11 @@ a:visited{
     transform: scale(1.1);
 }
 
+.ingredients-right {
+    overflow: hidden;
+}
+
 .ing-btn-right {
-    content:"";
     position: absolute;
     width: 100px;
     height: 150px;
@@ -175,7 +165,6 @@ a:visited{
 
 .legume {
     top: -756px;
-    z-index: 1;
 }
 
 .legume-btn {
@@ -284,12 +273,10 @@ label{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-left: 35px;
-    padding: 10px;
-    width: 80%;
+    width: 25%;
     align-self: center;
     border: 1px solid var(--brighter);
-    box-shadow: 5px 5px 10px var(--brighter);
+    box-shadow: 1px 1px 5px var(--main-color);
     line-height: 20px;
     transition: ease-in-out 0.5s;
     border-radius: 8px;
@@ -301,8 +288,13 @@ label{
 
 .ticket{
  background: url(./Purée.jpg) center/cover;
-
+    font-family: "Chivo mono", serif;
+color: rgb(155, 104, 3);
+    letter-spacing: 5px;
 }
+
+
+
 .ticket:hover,.ticket2:hover, .ticket3:hover{
     cursor: pointer;
     box-shadow: 10px 10px 10px var(--brighter);

@@ -1,7 +1,11 @@
-const ingBtnLeft = document.querySelector(".ing-btn-left");
-const ingBtnRight = document.querySelector(".ing-btn-right");
-const ingContainerLeft = document.querySelector(".ing-container-left");
-const ingContainerRight = document.querySelector(".ing-container-right");
+const ingBtnLeft = document.getElementsByClassName("ing-btn-left");
+const ingBtnRight = document.getElementsByClassName("ing-btn-right");
+const ingContainerLeft = document.getElementsByClassName("ing-container-left");
+const ingContainerRight = document.getElementsByClassName(
+  "ing-container-right"
+);
+console.log(ingBtnLeft);
+
 const feculentBtn = document.querySelector(".feculent-btn");
 const feculent = document.querySelector(".feculent");
 const legume = document.querySelector(".legume");
@@ -53,10 +57,8 @@ let comté = document.querySelector("#comté");
 let persil = document.querySelector("#persil");
 
 rec.addEventListener("click", () => {
-  if (rec.style.top == "90%") {
-    rec.style.top = "50%";
-  } else {
-    rec.style.top = "90%";
+  if (rec.style.top == "50%") {
+    rec.style.top == "20%";
   }
   if (
     riz.checked === true &&
@@ -77,9 +79,10 @@ rec.addEventListener("click", () => {
     lait.checked === true &&
     muscade.checked === true
   ) {
+    console.log("okay");
     ticket.style.visibility = "visible";
     ticket.style.opacity = "1";
-    ticket.style.top = "-950px";
+    ticket.style.top = "150px";
   }
   if (
     riz.checked === true &&
