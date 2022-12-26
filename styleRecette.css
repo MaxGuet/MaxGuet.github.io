@@ -32,6 +32,8 @@ header{
 }
 
 nav{
+    display: flex;
+    justify-content: space-around;
     width: 100%;
     text-align: center;
 }
@@ -71,6 +73,7 @@ main{
     font-family: 'Chivo mono', serif;
     padding-top: 20px;
     color:#FEFEFF;
+    transition: 0.6s;
 }
 
 ul{
@@ -100,10 +103,6 @@ li a {
     transition: 0.5s;
 }
 
-li {
-    transition: 0.6s;
-}
-
 a:visited{
   color: black;
 }
@@ -112,6 +111,22 @@ h1 {
     text-transform: uppercase;
     text-shadow:2px 1px 10px #F8F8F9;
 }
+
+.phase {
+    display: none;
+    width: 60%;
+}
+
+.phase li {
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 30px;
+    list-style:disc;
+    width: 90%;
+    transform: scale(1);
+    cursor: auto;
+}
+
 
 
 

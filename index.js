@@ -4,8 +4,6 @@ const ingContainerLeft = document.getElementsByClassName("ing-container-left");
 const ingContainerRight = document.getElementsByClassName(
   "ing-container-right"
 );
-console.log(ingBtnLeft);
-
 const feculentBtn = document.querySelector(".feculent-btn");
 const feculent = document.querySelector(".feculent");
 const legume = document.querySelector(".legume");
