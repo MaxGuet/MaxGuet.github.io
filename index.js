@@ -1,7 +1,9 @@
-const ingBtnLeft = document.querySelector(".ing-btn-left");
-const ingBtnRight = document.querySelector(".ing-btn-right");
-const ingContainerLeft = document.querySelector(".ing-container-left");
-const ingContainerRight = document.querySelector(".ing-container-right");
+const ingBtnLeft = document.querySelectorAll("ing-btn-left");
+const ingBtnRight = document.getElementsByClassName("ing-btn-right");
+const ingContainerLeft = document.getElementsByClassName("ing-container-left");
+const ingContainerRight = document.getElementsByClassName(
+  "ing-container-right"
+);
 const feculentBtn = document.querySelector(".feculent-btn");
 const feculent = document.querySelector(".feculent");
 const legume = document.querySelector(".legume");
@@ -28,7 +30,7 @@ const ticket2 = document.querySelector(".ticket2");
 const ticket3 = document.querySelector(".ticket3");
 const ticket4 = document.querySelector(".ticket4");
 
-let pates = document.querySelector("#pates");
+const pates = document.querySelector("#pates");
 let poireau = document.querySelector("#poireau");
 let riz = document.querySelector("#riz");
 let patates = document.querySelector("#patate");
@@ -53,10 +55,8 @@ let comté = document.querySelector("#comté");
 let persil = document.querySelector("#persil");
 
 rec.addEventListener("click", () => {
-  if (rec.style.top == "90%") {
-    rec.style.top = "50%";
-  } else {
-    rec.style.top = "90%";
+  if (rec.style.top == "50%") {
+    rec.style.top == "20%";
   }
   if (
     riz.checked === true &&
@@ -68,7 +68,7 @@ rec.addEventListener("click", () => {
     vinBlanc.checked === true
   ) {
     ticket2.style.visibility = "visible";
-    ticket2.style.opacity = "1";
+    ticket2.style.opacgooity = "1";
     ticket2.style.top = "-950px";
   }
   if (
@@ -77,9 +77,10 @@ rec.addEventListener("click", () => {
     lait.checked === true &&
     muscade.checked === true
   ) {
+    console.log("okay");
     ticket.style.visibility = "visible";
     ticket.style.opacity = "1";
-    ticket.style.top = "-950px";
+    ticket.style.top = "150px";
   }
   if (
     riz.checked === true &&
