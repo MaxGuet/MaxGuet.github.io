@@ -1,4 +1,4 @@
-const ingBtnLeft = document.getElementsByClassName("ing-btn-left");
+const ingBtnLeft = document.querySelectorAll("ing-btn-left");
 const ingBtnRight = document.getElementsByClassName("ing-btn-right");
 const ingContainerLeft = document.getElementsByClassName("ing-container-left");
 const ingContainerRight = document.getElementsByClassName(
@@ -30,7 +30,7 @@ const ticket2 = document.querySelector(".ticket2");
 const ticket3 = document.querySelector(".ticket3");
 const ticket4 = document.querySelector(".ticket4");
 
-let pates = document.querySelector("#pates");
+const pates = document.querySelector("#pates");
 let poireau = document.querySelector("#poireau");
 let riz = document.querySelector("#riz");
 let patates = document.querySelector("#patate");
@@ -68,7 +68,7 @@ rec.addEventListener("click", () => {
     vinBlanc.checked === true
   ) {
     ticket2.style.visibility = "visible";
-    ticket2.style.opacity = "1";
+    ticket2.style.opacgooity = "1";
     ticket2.style.top = "-950px";
   }
   if (
