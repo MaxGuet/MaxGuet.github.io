@@ -1,9 +1,3 @@
-const ingBtnLeft = document.querySelectorAll("ing-btn-left");
-const ingBtnRight = document.querySelectorAll("ing-btn-right");
-const ingContainerLeft = document.querySelectorAll("ing-container-left");
-const ingContainerRight = document.getElementsByClassName(
-  "ing-container-right"
-);
 const feculentBtn = document.querySelector(".feculent-btn");
 const feculent = document.querySelector(".feculent");
 const legume = document.querySelector(".legume");
@@ -27,6 +21,7 @@ const poireau = document.querySelector("#poireau");
 const riz = document.querySelector("#riz");
 const patates = document.querySelector("#patate");
 const polenta = document.querySelector("#polenta");
+const semoule = document.querySelector("#semoule");
 const carotte = document.querySelector("#carotte");
 const fondVeau = document.querySelector("#fondDeVeau");
 const oignon = document.querySelector("#oignon");
@@ -34,6 +29,7 @@ const beurre = document.querySelector("#beurre");
 const lait = document.querySelector("#lait");
 const haricotR = document.querySelector("#haricotRouge");
 const boeuf = document.querySelector("#boeuf");
+const cochon = document.querySelector("#cochon");
 const tomate = document.querySelector("#tomate");
 const huileOlive = document.querySelector("#huileOlive");
 const poivron = document.querySelector("#poivron");
@@ -45,45 +41,77 @@ const cumin = document.querySelector("#cumin");
 const muscade = document.querySelector("#muscade");
 const comté = document.querySelector("#comté");
 const persil = document.querySelector("#persil");
+const menthe = document.querySelector("#menthe");
+const vinaigre = document.querySelector("#vinaigre");
+const mozzarella = document.querySelector("#mozzarella");
+const basilic = document.querySelector("#basilic");
 
 feculentBtn.addEventListener("click", () => {
   feculent.classList.toggle("ing-container-left-open");
+  legume.classList.remove("ing-container-left-open");
+  onion.classList.remove("ing-container-left-open");
+  aromate.classList.remove("ing-container-left-open");
+  epice.classList.remove("ing-container-left-open");
 });
 
 legumeBtn.addEventListener("click", () => {
   legume.classList.toggle("ing-container-left-open");
+  feculent.classList.remove("ing-container-left-open");
+  onion.classList.remove("ing-container-left-open");
+  aromate.classList.remove("ing-container-left-open");
+  epice.classList.remove("ing-container-left-open");
 });
 
 onionBtn.addEventListener("click", () => {
   onion.classList.toggle("ing-container-left-open");
+  feculent.classList.remove("ing-container-left-open");
+  legume.classList.remove("ing-container-left-open");
+  aromate.classList.remove("ing-container-left-open");
+  epice.classList.remove("ing-container-left-open");
 });
 
 aromateBtn.addEventListener("click", () => {
   aromate.classList.toggle("ing-container-left-open");
+  feculent.classList.remove("ing-container-left-open");
+  legume.classList.remove("ing-container-left-open");
+  onion.classList.remove("ing-container-left-open");
+  epice.classList.remove("ing-container-left-open");
 });
 
 epiceBtn.addEventListener("click", () => {
   epice.classList.toggle("ing-container-left-open");
+  feculent.classList.remove("ing-container-left-open");
+  legume.classList.remove("ing-container-left-open");
+  onion.classList.remove("ing-container-left-open");
+  aromate.classList.remove("ing-container-left-open");
 });
 
 liquideBtn.addEventListener("click", () => {
   liquide.classList.toggle("ing-container-right-open");
+  fromage.classList.remove("ing-container-right-open");
+  viande.classList.remove("ing-container-right-open");
+  gras.classList.remove("ing-container-right-open");
 });
 
 fromageBtn.addEventListener("click", () => {
   fromage.classList.toggle("ing-container-right-open");
+  liquide.classList.remove("ing-container-right-open");
+  viande.classList.remove("ing-container-right-open");
+  gras.classList.remove("ing-container-right-open");
 });
 
 viandeBtn.addEventListener("click", () => {
   viande.classList.toggle("ing-container-right-open");
+  fromage.classList.remove("ing-container-right-open");
+  liquide.classList.remove("ing-container-right-open");
+  gras.classList.remove("ing-container-right-open");
 });
 
 grasBtn.addEventListener("click", () => {
+  fromage.classList.remove("ing-container-right-open");
+  liquide.classList.remove("ing-container-right-open");
+  viande.classList.remove("ing-container-right-open");
   gras.classList.toggle("ing-container-right-open");
-});
-
-fromageBtn.addEventListener("click", () => {
-  fromage.classList.toggle("ing-container-right");
 });
 
 const createDiv = (parent, title, image) => {
@@ -103,11 +131,22 @@ const receipeContainer = document.querySelector(".receipe-container");
 
 receipeBtn.addEventListener("click", () => {
   receipeBtn.style.top = "80%";
+  feculent.classList.remove("ing-container-left-open");
+  legume.classList.remove("ing-container-left-open");
+  onion.classList.remove("ing-container-left-open");
+  aromate.classList.remove("ing-container-left-open");
+  epice.classList.remove("ing-container-left-open");
+  viande.classList.remove("ing-container-right-open");
+  liquide.classList.remove("ing-container-right-open");
+  gras.classList.remove("ing-container-right-open");
+  fromage.classList.replace("ing-container-right-open", "ing-container-right");
+
   if (
     patates.checked === true &&
     lait.checked === true &&
     muscade.checked === true &&
-    beurre.checked === true
+    beurre.checked === true &&
+    ail.checked === true
   ) {
     createDiv(receipeContainer, "purée", "./purée.jpg");
   }
@@ -131,7 +170,8 @@ receipeBtn.addEventListener("click", () => {
     poivron.checked === true &&
     oignon.checked === true &&
     ail.checked === true &&
-    huileOlive.checked === true
+    huileOlive.checked === true &&
+    cumin.checked === true
   )
     createDiv(receipeContainer, "Chili", "./chili.jpg");
   if (
@@ -141,8 +181,43 @@ receipeBtn.addEventListener("click", () => {
     boeuf.checked === true &&
     oignon.checked === true &&
     ail.checked === true &&
-    persil.checked === true
+    persil.checked === true &&
+    carotte.checked === true
   ) {
     createDiv(receipeContainer, "Hachis Parmentier", "./hachis.jpg");
   }
+  if (
+    pates.checked === true &&
+    cochon.checked === true &&
+    parmesan.checked === true &&
+    beurre.checked === true &&
+    oignon.checked === true
+  )
+    createDiv(receipeContainer, "Pates à la carbonara", "./carbonara.jpg");
+  if (
+    semoule.checked === true &&
+    persil.checked === true &&
+    tomate.checked === true &&
+    huileOlive.checked === true &&
+    poivron.checked === true &&
+    oignon.checked === true &&
+    menthe.checked === true
+  )
+    createDiv(receipeContainer, "Taboulé", "./taboule.jpg");
+
+  if (
+    patates.checked === true &&
+    oignon.checked === true &&
+    huileOlive.checked === true &&
+    vinaigre.checked === true
+  )
+    createDiv(receipeContainer, "Salade de patates", "./saladePatate.jpg");
+
+  if (
+    tomate.checked === true &&
+    mozzarella.checked === true &&
+    huileOlive.checked === true &&
+    basilic.checked === true
+  )
+    createDiv(receipeContainer, "Tomates / Mozzarella", "./tomateMozza.jpg");
 });

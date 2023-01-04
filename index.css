@@ -7,7 +7,11 @@
     margin: 0;
     padding: 0 auto;
     box-sizing: border-box;
+    
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 :root {
     --main-color : #F8F8F9;
@@ -27,8 +31,8 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 200vh;
-    position: fixed;
+    width: 100%;
+    /* position: fixed; */
     top: 0;
     transition: 0.6s;
     background: var(--background1)
@@ -75,12 +79,11 @@ a:visited{
 
 
 .pres {
-    background: url(./background.jpg) center/cover fixed;
+    background: url(./background.jpg) center fixed;
     width: 100%;
-    height: 100%;
+    height: 93.5%;
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    margin-top: 60px;
     position: relative;
 }
 
@@ -113,7 +116,7 @@ button:hover {
     border-radius: 20px;
     opacity: 0.9;
     transition: 0.6s;
-    top: 10%;
+    top: 5%;
     display: flex;
     position: absolute;
 }
@@ -126,7 +129,7 @@ button:hover {
     border-radius: 20px;
     opacity: 0.9;
     transition: 0.6s;
-    top: 10%;
+    top: 5%;
     display: flex;
     position: absolute;
 }
@@ -160,9 +163,10 @@ button:hover {
     border-radius: 20px;
     opacity: 0.9;
     transition: 0.6s;
-    top: 10%;
+    top: 5%;
     display: flex;
     position: absolute;
+    
 }
 
 .ing-container-right-open {
@@ -174,7 +178,7 @@ button:hover {
     border-radius: 20px;
     opacity: 0.9;
     transition: 0.6s;
-    top: 10%;
+    top: 5%;
     display: flex;
     
 }
@@ -250,13 +254,14 @@ label{
 }
 
 .receipe-container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
 }
 .receipe-suggestion {
-    width: 300px;
-    height: 150px;
+    width: 200px;
+    height: 100px;
     border-radius: 10px;
     border: 1px solid black;
     margin-top: 40px;
@@ -264,6 +269,8 @@ label{
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
+    font-size: 0.8rem;
+    transition: 0.5s;
 }
 
 .receipe-suggestion-img {
@@ -276,6 +283,7 @@ label{
 
 .receipe-suggestion:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 .receipe-suggestion-title{

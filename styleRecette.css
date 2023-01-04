@@ -38,7 +38,7 @@ header{
 
 nav{
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 65% 35%;
     width: 100%;
     text-align: center;
 }
@@ -59,7 +59,7 @@ a:hover {
 }
 
 main{
-    background: url(./backgroundRecette.jpg) fixed center/cover;
+    background: url(./backgroundRecette.jpg);
     background-position-x: 50%;
     height: 100vh;
     width: 100vw;
