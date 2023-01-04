@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&family=Montserrat+Subrayada&display=swap');
 
 * {
     margin: 0;
@@ -15,13 +17,17 @@
 
 }
 
+body {
+    height: 100vh;
+}
+
 
 header{
     height: 60px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 200vh;
     position: fixed;
     top: 0;
     transition: 0.6s;
@@ -71,248 +77,13 @@ a:visited{
 .pres {
     background: url(./background.jpg) center/cover fixed;
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    padding-top: 100px;
-}
-
-.ingredients-left {
-    height: 100vh;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 50px;
-}
-
-
-
-.ing-container-left {
-    height: 80%;
-    width: 60%;
-    background: #e3dab2;
-    left: -60%;
+    margin-top: 60px;
     position: relative;
-    border-radius: 20px;
-    opacity: 0.9;
-    transition: 0.6s;
-    top: 0%;
-    display: flex;
 }
 
-.ing-container-right {
-    height: 80%;
-    width: 60%;
-    background: #e3dab2;
-    left: 100%;
-    position: relative;
-    border-radius: 20px;
-    opacity: 0.9;
-    transition: 0.6s;
-    top: 30px;
-    display: flex;
-}
-
-.ing-btn-left{
-    position: absolute;
-    width: 100px;
-    height: 150px;
-    border-radius: 17px;
-    background:#e3dab2;
-    right: -45px;
-    writing-mode: vertical-lr;
-    text-align: center;
-    padding-left: 60px;
-    font-weight: 900;
-    font-size: 2rem;
-    transition: .5s;
-}
-
-.ing-btn-left:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.ingredients-right {
-    overflow: hidden;
-}
-
-.ing-btn-right {
-    position: absolute;
-    width: 100px;
-    height: 150px;
-    border-radius: 17px;
-    background:#e3dab2;
-    left: -45px;
-    writing-mode: vertical-rl;
-    text-align: center;
-    padding-right: 53px;
-    font-weight: 900;
-    font-size: 2rem;
-    transition: .5s;
-}
-
-.ing-btn-right:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.feculent {
-    top: 30px;
-}
-
-.legume {
-    top: -756px;
-}
-
-.legume-btn {
-    top: 150px;
-}
-
-.oignon {
-    top: -1544px;
-}
-
-.oignon-btn {
-    top: 302px;
-}
-
-
-.aromate {
-    top: -2331px;
-}
-
-.aromate-btn {
-    top: 452px;
-}
-
-
-.epice {
-    top: -3117px;
-}
-
-.epice-btn{
-    top: 602px;
-}
-
-.liquide{
-    top: 30px;
-    left: 100%;
-}
-
-
-.liquide-btn{
-    
-    top: 0px;
-}
-
-
-.gras {
-    top: -756px;
-}
-
-.gras-btn {
-    top: 150px;
-}
-
-
-.viande {
-    top: -1543px;
-}
-
-.viande-btn {
-    top: 453px;
-}
-
-.fromage{
-    top: -2330px;
-}
-
-.fromage-btn {
-    top: 603px;
-}
-
-
-input:hover {
-    cursor: pointer;
-}
-
-input[type=checkbox] {
-    transform: scale(1.4);
-}
-
-label{
-    font-family: 'Chivo Mono', monospace;
-    font-style: italic;
-    font-size: 1.5rem;
-}
-
-.recette {
-    display: flex;
-    justify-content: space-around;
-}
-
-
-.right-side-ticket {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 10px;
-    padding-top: 20px;
-    position: relative;
-    top: -150px;
-    
-}
-
-.ticket, .ticket2, .ticket3, .ticket4{
-    position: absolute;
-    top: -150px;
-    left: 680px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 25%;
-    align-self: center;
-    border: 1px solid var(--brighter);
-    box-shadow: 1px 1px 5px var(--main-color);
-    line-height: 20px;
-    transition: ease-in-out 0.5s;
-    border-radius: 8px;
-    height: 100px;
-    visibility:hidden;
-    opacity: 0;
-    transition: visibility 0, opacity 1s ease-in-out; 
-}
-
-.ticket{
- background: url(./Purée.jpg) center/cover;
-    font-family: "Chivo mono", serif;
-color: rgb(155, 104, 3);
-    letter-spacing: 5px;
-}
-
-
-
-.ticket:hover,.ticket2:hover, .ticket3:hover{
-    cursor: pointer;
-    box-shadow: 10px 10px 10px var(--brighter);
- }
-
- .ticket2{
-    background: url(./risotto.jpg) center/cover;
- }
-ol {
-    margin: 10px;
-    line-height: 25px;
-}
-
-footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 button{
     position: absolute;
     top: 50%;
@@ -334,3 +105,184 @@ button:hover {
 }
 
 
+.ing-container-left {
+    height: 80%;
+    width: 30%;
+    left: -30%;
+    background: #e3dab2;
+    border-radius: 20px;
+    opacity: 0.9;
+    transition: 0.6s;
+    top: 10%;
+    display: flex;
+    position: absolute;
+}
+
+.ing-container-left-open {
+    height: 80%;
+    width: 30%;
+    left: 10.3%;
+    background: #e3dab2;
+    border-radius: 20px;
+    opacity: 0.9;
+    transition: 0.6s;
+    top: 10%;
+    display: flex;
+    position: absolute;
+}
+
+.ing-btn-left{
+    position: absolute;
+    width: 100px;
+    height: 20%;
+    border-radius: 17px;
+    background:#e3dab2;
+    right: -45px;
+    writing-mode: vertical-lr;
+    text-align: center;
+    padding-left: 60px;
+    font-weight: 900;
+    font-size: 150%;
+    transition: .5s;
+}
+
+.ing-btn-left:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.ing-container-right {
+    height: 80%;
+    width: 30%;
+    right: -30%;
+    background: #e3dab2;
+    border-radius: 20px;
+    opacity: 0.9;
+    transition: 0.6s;
+    top: 10%;
+    display: flex;
+    position: absolute;
+}
+
+.ing-container-right-open {
+    height: 80%;
+    width: 30%;
+    right: 10%;
+    background: #e3dab2;
+    position: absolute;
+    border-radius: 20px;
+    opacity: 0.9;
+    transition: 0.6s;
+    top: 10%;
+    display: flex;
+    
+}
+
+.ing-btn-right{
+    position: absolute;
+    width: 100px;
+    height: 20%;
+    border-radius: 17px;
+    background:#e3dab2;
+    left: -40px;
+    writing-mode: vertical-lr;
+    text-align: center;
+    padding-left: 10px;
+    font-weight: 900;
+    font-size: 150%;
+    transition: .5s;
+}
+
+
+.ing-btn-right:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.legume-btn {
+    top: 20%;
+}
+
+.oignon-btn {
+    top: 40%;
+}
+
+.aromate-btn {
+    top: 60%;
+}
+
+.epice-btn {
+    top: 80%;
+}
+
+.liquide-btn{
+    top: 20%;
+}
+
+.gras-btn{
+    top: 60%
+}
+
+.fromage-btn{
+    top: 80%;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 30%;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    transform: scale(1.4);
+}
+
+label{
+    font-family: 'Chivo Mono', monospace;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.receipe-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.receipe-suggestion {
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.receipe-suggestion-img {
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+  }
+
+.receipe-suggestion:hover {
+    cursor: pointer;
+}
+
+.receipe-suggestion-title{
+    font-family: 'Montserrat Subrayada';
+    color: whitesmoke;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color:black;
+
+    
+}
