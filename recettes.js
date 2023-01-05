@@ -30,7 +30,6 @@ const gateauY = document.querySelector(".gateauY");
 const main = document.querySelector(".main");
 
 taboulet.addEventListener("click", () => {
-  console.log("coucou!");
   plat.style.display = "none";
   dessert.style.display = "none";
   tomMozza.style.display = "none";
@@ -46,7 +45,6 @@ taboulet.addEventListener("click", () => {
 });
 
 saladePatate.addEventListener("click", () => {
-  console.log("okay");
   plat.style.display = "none";
   dessert.style.display = "none";
   tabouletR.style.display = "none";
@@ -175,11 +173,11 @@ tomateFarcie.addEventListener("click", () => {
   gateauY.style.display = "none";
   tomateF.style.display = " initial";
 });
+console.log(basboussa);
 
 riz.addEventListener("click", () => {
   entree.style.display = "none";
   plat.style.display = "none";
-  dessert.style.display = "none";
   sdpR.style.display = "none";
   tabouletR.style.display = "none";
   tomMozza.style.display = "none";
