@@ -50,6 +50,7 @@ const mais = document.querySelector("#mais");
 const thon = document.querySelector("#thon");
 const receipeSuggestion = document.querySelector(".receipeSuggestion");
 const main = document.querySelector(".pres");
+const vanille = document.getElementById("vanille");
 
 feculentBtn.addEventListener("click", () => {
   feculent.classList.toggle("ing-container-left-open");
@@ -240,4 +241,6 @@ receipeBtn.addEventListener("click", () => {
     tomate.checked === true
   )
     createDiv("Salade de riz");
+  if (riz.checked === true && lait.checked === true && vanille.checked === true)
+    createDiv("Riz au Lait");
 });
