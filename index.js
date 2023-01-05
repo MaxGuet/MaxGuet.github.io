@@ -10,6 +10,7 @@ const epice = document.querySelector(".epice");
 const epiceBtn = document.querySelector(".epice-btn");
 const liquide = document.querySelector(".liquide");
 const liquideBtn = document.querySelector(".liquide-btn");
+const receipeContainer = document.querySelector(".receipe-container");
 const gras = document.querySelector(".gras");
 const grasBtn = document.querySelector(".gras-btn");
 const viande = document.querySelector(".viande");
@@ -45,6 +46,10 @@ const menthe = document.querySelector("#menthe");
 const vinaigre = document.querySelector("#vinaigre");
 const mozzarella = document.querySelector("#mozzarella");
 const basilic = document.querySelector("#basilic");
+const mais = document.querySelector("#mais");
+const thon = document.querySelector("#thon");
+const receipeSuggestion = document.querySelector(".receipeSuggestion");
+const main = document.querySelector(".pres");
 
 feculentBtn.addEventListener("click", () => {
   feculent.classList.toggle("ing-container-left-open");
@@ -114,22 +119,29 @@ grasBtn.addEventListener("click", () => {
   gras.classList.toggle("ing-container-right-open");
 });
 
-const createDiv = (parent, title, image) => {
+const createDiv = (title) => {
   const newDiv = document.createElement("div");
   newDiv.classList.add("receipe-suggestion");
-  parent.appendChild(newDiv);
-  newDiv.style.background = `url(${image}) center/cover`;
+  newDiv.id = title;
+  receipeContainer.appendChild(newDiv);
+  newDiv.style.background = `#2F4858`;
 
   const newDivTitle = document.createElement("h1");
   newDivTitle.classList.add("receipe-suggestion-title");
   newDiv.appendChild(newDivTitle);
   newDivTitle.innerHTML = title;
+
+  receipeContainer.insertBefore(newDiv, receipeContainer.firstChild);
 };
 
+function removeChild(parent) {
+  while (parent.firstChild) parent.removeChild(parent.firstChild);
+}
+
 const receipeBtn = document.getElementById("receipe");
-const receipeContainer = document.querySelector(".receipe-container");
 
 receipeBtn.addEventListener("click", () => {
+  removeChild(receipeContainer);
   receipeBtn.style.top = "80%";
   feculent.classList.remove("ing-container-left-open");
   legume.classList.remove("ing-container-left-open");
@@ -148,7 +160,7 @@ receipeBtn.addEventListener("click", () => {
     beurre.checked === true &&
     ail.checked === true
   ) {
-    createDiv(receipeContainer, "purée", "./purée.jpg");
+    createDiv("purée");
   }
   if (
     riz.checked === true &&
@@ -159,7 +171,7 @@ receipeBtn.addEventListener("click", () => {
     parmesan.checked === true &&
     vinBlanc.checked === true
   )
-    createDiv(receipeContainer, "Risotto", "./risotto.jpg");
+    createDiv("Risotto");
   if (
     riz.checked === true &&
     haricotR.checked === true &&
@@ -173,7 +185,7 @@ receipeBtn.addEventListener("click", () => {
     huileOlive.checked === true &&
     cumin.checked === true
   )
-    createDiv(receipeContainer, "Chili", "./chili.jpg");
+    createDiv("Chili");
   if (
     patates.checked === true &&
     beurre.checked === true &&
@@ -184,7 +196,7 @@ receipeBtn.addEventListener("click", () => {
     persil.checked === true &&
     carotte.checked === true
   ) {
-    createDiv(receipeContainer, "Hachis Parmentier", "./hachis.jpg");
+    createDiv("Hachis Parmentier");
   }
   if (
     pates.checked === true &&
@@ -193,7 +205,7 @@ receipeBtn.addEventListener("click", () => {
     beurre.checked === true &&
     oignon.checked === true
   )
-    createDiv(receipeContainer, "Pates à la carbonara", "./carbonara.jpg");
+    createDiv("Pates à la carbonara");
   if (
     semoule.checked === true &&
     persil.checked === true &&
@@ -203,7 +215,7 @@ receipeBtn.addEventListener("click", () => {
     oignon.checked === true &&
     menthe.checked === true
   )
-    createDiv(receipeContainer, "Taboulé", "./taboule.jpg");
+    createDiv("Taboulé");
 
   if (
     patates.checked === true &&
@@ -211,7 +223,7 @@ receipeBtn.addEventListener("click", () => {
     huileOlive.checked === true &&
     vinaigre.checked === true
   )
-    createDiv(receipeContainer, "Salade de patates", "./saladePatate.jpg");
+    createDiv("Salade de patates");
 
   if (
     tomate.checked === true &&
@@ -219,5 +231,13 @@ receipeBtn.addEventListener("click", () => {
     huileOlive.checked === true &&
     basilic.checked === true
   )
-    createDiv(receipeContainer, "Tomates / Mozzarella", "./tomateMozza.jpg");
+    createDiv("Tomates / Mozzarella");
+  if (
+    riz.checked === true &&
+    huileOlive.checked === true &&
+    mais.checked === true &&
+    thon.checked === true &&
+    tomate.checked === true
+  )
+    createDiv("Salade de riz");
 });

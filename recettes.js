@@ -27,6 +27,7 @@ const tomateF = document.querySelector(".tomateF");
 const rizAL = document.querySelector(".rizAL");
 const basboussa = document.querySelector(".basboussa");
 const gateauY = document.querySelector(".gateauY");
+const main = document.querySelector(".main");
 
 taboulet.addEventListener("click", () => {
   console.log("coucou!");
@@ -178,6 +179,7 @@ tomateFarcie.addEventListener("click", () => {
 riz.addEventListener("click", () => {
   entree.style.display = "none";
   plat.style.display = "none";
+  dessert.style.display = "none";
   sdpR.style.display = "none";
   tabouletR.style.display = "none";
   tomMozza.style.display = "none";
