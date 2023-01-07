@@ -149,17 +149,15 @@ const createDiv = (title) => {
 // //   }
 // }
 
-//******FONCTION REMOVE CREATION OF THE SAME RECEIPE */
+// ******FONCTION REMOVE CREATION OF THE SAME RECEIPE */
 function removeChild(parent) {
-  while (parent.firstChild) parent.removeChild(parent.firstChild);
+  while (parent.firstChild.id !== "receipe")
+    parent.removeChild(parent.firstChild);
 }
 
 receipeBtn.addEventListener("click", () => {
   removeChild(receipeContainer);
   receipeBtn.style.top = "80%";
-  if (window.screen.width < 800) {
-    receipeBtn.style.display = "none";
-  }
   feculent.classList.remove("ing-container-left-open");
   legume.classList.remove("ing-container-left-open");
   onion.classList.remove("ing-container-left-open");
@@ -169,7 +167,6 @@ receipeBtn.addEventListener("click", () => {
   liquide.classList.remove("ing-container-right-open");
   gras.classList.remove("ing-container-right-open");
   fromage.classList.replace("ing-container-right-open", "ing-container-right");
-
   if (
     patates.checked === true &&
     lait.checked === true &&
@@ -259,7 +256,4 @@ receipeBtn.addEventListener("click", () => {
     createDiv("Salade de riz");
   if (riz.checked === true && lait.checked === true && vanille.checked === true)
     createDiv("Riz au Lait");
-  // else {
-  //   createDiv("C'est l'heure de faire les courses!");
-  // }
 });
