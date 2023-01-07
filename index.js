@@ -1,3 +1,4 @@
+const receipeBtn = document.getElementById("receipe");
 const feculentBtn = document.querySelector(".feculent-btn");
 const feculent = document.querySelector(".feculent");
 const legume = document.querySelector(".legume");
@@ -51,6 +52,7 @@ const thon = document.querySelector("#thon");
 const receipeSuggestion = document.querySelector(".receipeSuggestion");
 const main = document.querySelector(".pres");
 const vanille = document.getElementById("vanille");
+const checkboxes = document.querySelectorAll("input[type=checkbox]");
 
 feculentBtn.addEventListener("click", () => {
   feculent.classList.toggle("ing-container-left-open");
@@ -120,6 +122,8 @@ grasBtn.addEventListener("click", () => {
   gras.classList.toggle("ing-container-right-open");
 });
 
+//******FONCTION RECEIPE SUGGESTION CREATION */
+
 const createDiv = (title) => {
   const newDiv = document.createElement("div");
   newDiv.classList.add("receipe-suggestion");
@@ -127,7 +131,8 @@ const createDiv = (title) => {
   receipeContainer.appendChild(newDiv);
   newDiv.style.background = `#2F4858`;
 
-  const newDivTitle = document.createElement("h1");
+  const newDivTitle = document.createElement("a");
+  newDivTitle.setAttribute("href", "./recette.html");
   newDivTitle.classList.add("receipe-suggestion-title");
   newDiv.appendChild(newDivTitle);
   newDivTitle.innerHTML = title;
@@ -135,15 +140,26 @@ const createDiv = (title) => {
   receipeContainer.insertBefore(newDiv, receipeContainer.firstChild);
 };
 
+// ******FONCTION SELECT ALL*********//
+
+// // function toggle(source) {
+// //   checkboxes = document.getElementsByName("foo");
+// //   for (let i = 0, n = checkboxes.length; i < n; i++) {
+// //     checkboxes[i].checked = source.checked;
+// //   }
+// }
+
+//******FONCTION REMOVE CREATION OF THE SAME RECEIPE */
 function removeChild(parent) {
   while (parent.firstChild) parent.removeChild(parent.firstChild);
 }
 
-const receipeBtn = document.getElementById("receipe");
-
 receipeBtn.addEventListener("click", () => {
   removeChild(receipeContainer);
   receipeBtn.style.top = "80%";
+  if (window.screen.width < 800) {
+    receipeBtn.style.display = "none";
+  }
   feculent.classList.remove("ing-container-left-open");
   legume.classList.remove("ing-container-left-open");
   onion.classList.remove("ing-container-left-open");
@@ -243,4 +259,7 @@ receipeBtn.addEventListener("click", () => {
     createDiv("Salade de riz");
   if (riz.checked === true && lait.checked === true && vanille.checked === true)
     createDiv("Riz au Lait");
+  // else {
+  //   createDiv("C'est l'heure de faire les courses!");
+  // }
 });

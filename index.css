@@ -5,13 +5,10 @@
 
 * {
     margin: 0;
-    padding: 0 auto;
+    padding: 0;
     box-sizing: border-box;
     
 }
-body::-webkit-scrollbar {
-    display: none;
-  }
 
 :root {
     --main-color : #F8F8F9;
@@ -23,6 +20,7 @@ body::-webkit-scrollbar {
 
 body {
     height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -100,7 +98,7 @@ a:visited{
   background-size: cover;
 }
 
-button{
+#receipe{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -116,7 +114,7 @@ button{
     z-index: 1;
 }
 
-button:hover {
+#receipe:hover {
     cursor: pointer;
     box-shadow: 5px 5px 4px var(--brighter);
 }
@@ -124,8 +122,8 @@ button:hover {
 
 .ing-container-left {
     height: 80%;
-    width: 30%;
-    left: -30%;
+    width: 20%;
+    left: -20%;
     background: #e3dab2;
     border-radius: 20px;
     opacity: 0.9;
@@ -171,8 +169,8 @@ button:hover {
 
 .ing-container-right {
     height: 80%;
-    width: 30%;
-    right: -30%;
+    width: 20%;
+    right: -20%;
     background: #e3dab2;
     border-radius: 20px;
     opacity: 0.9;
@@ -271,8 +269,9 @@ label{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-self: center;
+    gap: 10px;
 }
 .receipe-suggestion {
     z-index: 1;
@@ -290,14 +289,6 @@ label{
     margin-left: 25px;
 }
 
-.receipe-suggestion-img {
-    border-radius: 10px 10px 0 0;
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    width: 100%;
-  }
-
 .receipe-suggestion:hover {
     cursor: pointer;
     box-shadow: 3px 3px 3px black;
@@ -309,5 +300,132 @@ label{
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
 text-transform: uppercase;
 letter-spacing: 3px;
+text-align: center;
+font-size: 0.6rem;
     
+}
+
+@media screen and (max-width: 800px) {
+
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        display: fixed;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        text-align: center;
+        font-family: "PT Serif";
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 0.6rem;
+        font-weight: 600;
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+        transition: transform 0.5s;
+    }
+
+    .pres {
+        display: grid;
+        grid-template-rows: 1fr 0.2fr 1fr;
+        grid-template-columns: 1fr;
+        background: url("./background.jpg") center/cover fixed;
+        height: 100%;
+    }
+
+    .ingredients-left {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: space-around;
+        width: 80%;
+        height: 100%
+
+    }
+
+    .ing-container-left {
+        position: static;
+        width: 100%;
+        margin-top: 10%;
+        gap: 10%;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        margin-left: 25%;
+    }
+
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: 100%;
+        padding: 10px;
+        line-height: 30px;
+    }
+
+    .ing-btn-left {
+        display: none;
+    }
+
+    label {
+        font-size: 0.8rem;
+        padding-right: 5px;
+    }
+    
+    .pres:before {
+        display: none;
+    }
+
+    .ingredients-right {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: space-between;
+        width: 80%;
+        height: 100%
+
+    }
+
+    .ing-container-right {
+        position: static;
+        width: 100%;
+        margin-top: 10%;
+        gap: 10%;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        margin-left: 25%;
+    }
+
+    .ing-btn-right {
+        display: none;
+    }
+
+    .receipe-container {
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .receipe-suggestion{
+        margin: 0;
+    }
+
+    #receipe{
+        top: 74%;
+        transform: translateX(-50%);
+    }
+
+
 }
