@@ -416,6 +416,7 @@ font-size: 0.6rem;
         margin-top: 10%;
         display: flex;
         justify-content: space-around;
+        align-items: center;
     }
 
     .receipe-suggestion{
@@ -423,8 +424,9 @@ font-size: 0.6rem;
     }
 
     #receipe{
-        top: 74%;
-        transform: translateX(-50%);
+        position: static;
+        align-self: center;
+        transform: translateX(0)
     }
 
 
