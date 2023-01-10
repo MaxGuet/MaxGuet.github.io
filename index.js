@@ -142,24 +142,31 @@ const createDiv = (title) => {
 
 // ******FONCTION SELECT ALL*********//
 
-// // function toggle(source) {
-// //   checkboxes = document.getElementsByName("foo");
-// //   for (let i = 0, n = checkboxes.length; i < n; i++) {
-// //     checkboxes[i].checked = source.checked;
-// //   }
-// }
-
-//******FONCTION REMOVE CREATION OF THE SAME RECEIPE */
-function removeChild(parent) {
-  while (parent.firstChild) parent.removeChild(parent.firstChild);
+function toggle(name, id) {
+  {
+    let checkboxes = document.getElementsByName(name);
+    let all = document.getElementById(id);
+    for (let i = 0, n = checkboxes.length; i < n; i++) {
+      checkboxes[i].checked = all.checked;
+    }
+  }
 }
 
+// ******FONCTION REMOVE CREATION OF THE SAME RECEIPE */
+function removeChild(parent) {
+  while (parent.firstChild.id !== "receipe")
+    parent.removeChild(parent.firstChild);
+}
+
+//*****FONCTION CREATION OF RECEIPE IDEA */
+
 receipeBtn.addEventListener("click", () => {
-  removeChild(receipeContainer);
-  receipeBtn.style.top = "80%";
-  if (window.screen.width < 800) {
+  if (window.innerWidth < 800) {
     receipeBtn.style.display = "none";
+  } else {
+    receipeBtn.style.top = "80%";
   }
+  removeChild(receipeContainer);
   feculent.classList.remove("ing-container-left-open");
   legume.classList.remove("ing-container-left-open");
   onion.classList.remove("ing-container-left-open");
@@ -169,7 +176,6 @@ receipeBtn.addEventListener("click", () => {
   liquide.classList.remove("ing-container-right-open");
   gras.classList.remove("ing-container-right-open");
   fromage.classList.replace("ing-container-right-open", "ing-container-right");
-
   if (
     patates.checked === true &&
     lait.checked === true &&
@@ -259,7 +265,4 @@ receipeBtn.addEventListener("click", () => {
     createDiv("Salade de riz");
   if (riz.checked === true && lait.checked === true && vanille.checked === true)
     createDiv("Riz au Lait");
-  // else {
-  //   createDiv("C'est l'heure de faire les courses!");
-  // }
 });

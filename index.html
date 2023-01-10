@@ -42,8 +42,8 @@
             <label for="all"
               ><input
                 type="checkbox"
-                onClick="toggle(this)"
-                id="master-checkbox"
+                id="allFec"
+                onClick="toggle('foo','allFec')"
               />
               Tout séléctionner</label
             >
@@ -91,23 +91,32 @@
                 type="checkbox"
                 id="haricotRouge"
                 value="haricotRouge"
-                name="foo"
+                name="foo1"
               />
               Haricots Rouges</label
             >
 
             <label for="mais"
-              ><input type="checkbox" id="mais" value="mais" name="foo" />
+              ><input type="checkbox" id="mais" value="mais" name="foo1" />
               Maïs</label
             >
 
             <label for="asperge"
-              ><input type="checkbox" id="asperge" value="asperge" name="foo" />
+              ><input
+                type="checkbox"
+                id="asperge"
+                value="asperge"
+                name="foo1"
+              />
               Asperge</label
             >
             <label for="all"
-              ><input type="checkbox" onClick="toggle(this)" /> Tout
-              séléctionner</label
+              ><input
+                type="checkbox"
+                id="allLegume"
+                onClick="toggle('foo1','allLegume')"
+              />
+              Tout séléctionner</label
             >
           </div>
         </div>
@@ -115,12 +124,12 @@
           <div class="oignon-btn ing-btn-left">Oignons</div>
           <div class="flex-container">
             <label for="oignon"
-              ><input type="checkbox" id="oignon" value="oignon" name="foo" />
+              ><input type="checkbox" id="oignon" value="oignon" name="foo2" />
               Oignons</label
             >
 
             <label for="ail">
-              <input type="checkbox" id="ail" value="ail" name="foo" />
+              <input type="checkbox" id="ail" value="ail" name="foo2" />
               Ail</label
             >
 
@@ -129,13 +138,17 @@
                 type="checkbox"
                 id="echalotte"
                 value="echalotte"
-                name="foo"
+                name="foo2"
               />
               Echalottes</label
             >
             <label for="all"
-              ><input type="checkbox" onClick="toggle(this)" /> Tout
-              séléctionner</label
+              ><input
+                type="checkbox"
+                id="allOnions"
+                onClick="toggle('foo2','allOnions')"
+              />
+              Tout séléctionner</label
             >
           </div>
         </div>
@@ -143,7 +156,7 @@
           <div class="aromate-btn ing-btn-left">Aromates</div>
           <div class="flex-container">
             <label for="persil"
-              ><input type="checkbox" id="persil" value="persil" name="foo" />
+              ><input type="checkbox" id="persil" value="persil" name="foo3" />
               Persil</label
             >
 
@@ -152,23 +165,32 @@
                 type="checkbox"
                 id="coriandre"
                 value="coriandre"
-                name="foo"
+                name="foo3"
               />
               Coriandre</label
             >
 
             <label for="basilic"
-              ><input type="checkbox" id="basilic" value="basilic" name="foo" />
+              ><input
+                type="checkbox"
+                id="basilic"
+                value="basilic"
+                name="foo3"
+              />
               Basilic</label
             >
 
             <label for="menthe"
-              ><input type="checkbox" id="menthe" value="menthe" name="foo" />
+              ><input type="checkbox" id="menthe" value="menthe" name="foo3" />
               Menthe</label
             >
             <label for="all"
-              ><input type="checkbox" onClick="toggle(this)" /> Tout
-              séléctionner</label
+              ><input
+                type="checkbox"
+                id="allAromates"
+                onClick="toggle('foo3','allAromates')"
+              />
+              Tout séléctionner</label
             >
           </div>
         </div>
@@ -176,12 +198,17 @@
           <div class="epice-btn ing-btn-left">Epices</div>
           <div class="flex-container">
             <label for="muscade"
-              ><input type="checkbox" id="muscade" value="muscade" name="foo" />
+              ><input
+                type="checkbox"
+                id="muscade"
+                value="muscade"
+                name="foo4"
+              />
               Muscade</label
             >
 
             <label for="cumin"
-              ><input type="checkbox" id="cumin" value="cumin" name="foo" />
+              ><input type="checkbox" id="cumin" value="cumin" name="foo4" />
               Cumin</label
             >
 
@@ -190,17 +217,26 @@
                 type="checkbox"
                 id="gingembre"
                 value="gingembre"
-                name="foo"
+                name="foo4"
               />
               Gingembre</label
             >
             <label for="vanille"
-              ><input type="checkbox" id="vanille" value="vanille" name="foo" />
+              ><input
+                type="checkbox"
+                id="vanille"
+                value="vanille"
+                name="foo4"
+              />
               Vanille</label
             >
             <label for="all"
-              ><input type="checkbox" onClick="toggle(this)" /> Tout
-              séléctionner</label
+              ><input
+                type="checkbox"
+                id="allSpice"
+                onClick="toggle('foo4','allSpice')"
+              />
+              Tout séléctionner</label
             >
           </div>
         </div>
@@ -217,18 +253,18 @@
                 type="checkbox"
                 id="fondDeVeau"
                 value="fondDeVeau"
-                name="foo"
+                name="foo5"
               />
               Fond de veau</label
             >
 
             <label for="creme"
-              ><input type="checkbox" id="creme" value="creme" name="foo" />
+              ><input type="checkbox" id="creme" value="creme" name="foo5" />
               Crème</label
             >
 
             <label for="lait"
-              ><input type="checkbox" id="lait" valut="lait" name="foo" />
+              ><input type="checkbox" id="lait" valut="lait" name="foo5" />
               Lait</label
             >
 
@@ -237,7 +273,7 @@
                 type="checkbox"
                 id="vinBlanc"
                 value="vinBlanc"
-                name="foo"
+                name="foo5"
               />
               Vin blanc</label
             >
@@ -247,13 +283,17 @@
                 type="checkbox"
                 id="vinaigre"
                 value="vinaigre"
-                name="foo"
+                name="foo5"
               />
               Vinaigre</label
             >
             <label for="all"
-              ><input type="checkbox" onClick="toggle(this)" /> Tout
-              séléctionner</label
+              ><input
+                type="checkbox"
+                id="allLiquid"
+                onClick="toggle('foo5','allLiquid')"
+              />
+              Tout séléctionner</label
             >
           </div>
         </div>
@@ -261,7 +301,7 @@
           <div class="gras-btn ing-btn-right">Gras</div>
           <div class="flex-container">
             <label for="beurre"
-              ><input type="checkbox" id="beurre" value="beurre" name="foo" />
+              ><input type="checkbox" id="beurre" value="beurre" name="foo6" />
               Beurre</label
             >
 
@@ -270,7 +310,7 @@
                 type="checkbox"
                 id="huileOlive"
                 value="huileOlive"
-                name="foo"
+                name="foo6"
               />
               Huile d'Olive</label
             >
@@ -280,7 +320,7 @@
                 type="checkbox"
                 id="huileTournesol"
                 value="huileTournesol"
-                name="foo"
+                name="foo6"
               />
               Huile de Tournesol</label
             >
@@ -290,13 +330,17 @@
                 type="checkbox"
                 id="huileSesame"
                 value="huileSesame"
-                name="foo"
+                name="foo6"
               />
               Huile de Sesame</label
             >
             <label for="all"
-              ><input type="checkbox" onClick="toggle(this)" /> Tout
-              séléctionner</label
+              ><input
+                type="checkbox"
+                id="allOil"
+                onClick="toggle('foo6','allOil')"
+              />
+              Tout séléctionner</label
             >
           </div>
         </div>
@@ -304,32 +348,36 @@
           <div class="viande-btn ing-btn-right">Viande</div>
           <div class="flex-container">
             <label for="poulet"
-              ><input type="checkbox" id="poulet" value="poulet" name="foo" />
+              ><input type="checkbox" id="poulet" value="poulet" name="foo7" />
               Poulet</label
             >
 
             <label for="boeuf"
-              ><input type="checkbox" id="boeuf" value="boeuf" name="foo" />
+              ><input type="checkbox" id="boeuf" value="boeuf" name="foo7" />
               Boeuf</label
             >
 
             <label for="cochon"
-              ><input type="checkbox" id="cochon" value="cochon" name="foo" />
+              ><input type="checkbox" id="cochon" value="cochon" name="foo7" />
               Cochon</label
             >
 
             <label for="thon"
-              ><input type="checkbox" id="thon" value="thon" name="foo" />
+              ><input type="checkbox" id="thon" value="thon" name="foo7" />
               Thon</label
             >
 
             <label for="oeuf"
-              ><input type="checkbox" id="oeuf" value="oeuf" name="foo" />
+              ><input type="checkbox" id="oeuf" value="oeuf" name="foo7" />
               Oeuf</label
             >
             <label for="all"
-              ><input type="checkbox" onClick="toggle(this)" /> Tout
-              séléctionner</label
+              ><input
+                type="checkbox"
+                id="allMeat"
+                onClick="toggle('foo7','allMeat')"
+              />
+              Tout séléctionner</label
             >
           </div>
         </div>
@@ -341,13 +389,13 @@
                 type="checkbox"
                 id="parmesan"
                 value="parmesan"
-                name="foo"
+                name="foo8"
               />
               Parmesan</label
             >
 
             <label for="comté"
-              ><input type="checkbox" id="comté" value="comté" name="foo" />
+              ><input type="checkbox" id="comté" value="comté" name="foo8" />
               Comté
             </label>
 
@@ -356,13 +404,17 @@
                 type="checkbox"
                 id="mozzarella"
                 value="mozzarella"
-                name="foo"
+                name="foo8"
               />
               Mozzarella
             </label>
             <label for="all"
-              ><input type="checkbox" onClick="toggle(this)" />Tout
-              séléctionner</label
+              ><input
+                type="checkbox"
+                id="all"
+                onClick="toggle('foo8', 'all')"
+              />
+              Tout séléctionner</label
             >
           </div>
         </div>
