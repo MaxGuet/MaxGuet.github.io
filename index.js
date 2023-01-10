@@ -142,12 +142,15 @@ const createDiv = (title) => {
 
 // ******FONCTION SELECT ALL*********//
 
-// // function toggle(source) {
-// //   checkboxes = document.getElementsByName("foo");
-// //   for (let i = 0, n = checkboxes.length; i < n; i++) {
-// //     checkboxes[i].checked = source.checked;
-// //   }
-// }
+function toggle(name, id) {
+  {
+    let checkboxes = document.getElementsByName(name);
+    let all = document.getElementById(id);
+    for (let i = 0, n = checkboxes.length; i < n; i++) {
+      checkboxes[i].checked = all.checked;
+    }
+  }
+}
 
 // ******FONCTION REMOVE CREATION OF THE SAME RECEIPE */
 function removeChild(parent) {
@@ -155,9 +158,15 @@ function removeChild(parent) {
     parent.removeChild(parent.firstChild);
 }
 
+//*****FONCTION CREATION OF RECEIPE IDEA */
+
 receipeBtn.addEventListener("click", () => {
+  if (window.innerWidth < 800) {
+    receipeBtn.style.display = "none";
+  } else {
+    receipeBtn.style.top = "80%";
+  }
   removeChild(receipeContainer);
-  receipeBtn.style.top = "80%";
   feculent.classList.remove("ing-container-left-open");
   legume.classList.remove("ing-container-left-open");
   onion.classList.remove("ing-container-left-open");
