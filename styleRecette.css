@@ -209,26 +209,26 @@ button:hover {
         z-index: 10;
     }
 
-    body {
-        height: 100%;
-        width: 100%;
-        overflow: visible;
-    }
     .recNav{
         width: 100%;
         align-items: center;
-    }
-
-    nav {
-        z-index: 4;
-    }
+    } 
 
     nav a {
         letter-spacing: 5px;
         font-size: 0.6rem;
         font-weight: 600;
         text-shadow: 1px 1px 1px rgb(0, 0, 0);
-        z-index: 5;
+    }
+
+
+    li {
+        z-index: 0;
+        font-size: 1rem;
+        line-height: 30px;
+        text-decoration:overline;
+        align-self: center;
+        transition: 0.5s;
     }
 
     .menu{
@@ -260,20 +260,10 @@ button:hover {
         padding-bottom: 20px;
     }
 
-
-
-    li {
-        z-index: 0;
-        font-size: 1rem;
-        line-height: 30px;
-        text-decoration:overline;
-        align-self: center;
-        transition: 0.5s;
-    }
-    
     .recette {
         min-height: 450px;
         overflow-y: scroll;
+        flex-direction: column;
     }
 
     .recette h1 {
@@ -286,8 +276,55 @@ button:hover {
         padding-top: 50px;
     }
 
-    .recette {
-        
+    .sdpR ul{
+        padding-top: 0;
+        margin-top: 0;
     }
 
+    .sdpR h1 {
+        margin-bottom: 0;
+    }
+
+    .tomMozza h1 {
+        margin-bottom: 0;
+    }
+
+    .sdr h1{
+        margin-bottom: 0;
+    }
+
+    .sdr ul{
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .risottoAs ul{
+        padding-top: 100px;
+    }
+
+    .hachisP ul {
+        padding-top: 100px;
+    }
+
+    .rizAL h1 {
+        margin-bottom: 0;
+    }
+
+.rizAL ul{
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.basboussa ul {
+    padding-top: 100px;
+}
+
+.gateauY h1{
+    margin: 0;
+}
+
+.gateauY ul {
+    padding-top: 0;
+    margin-top: 0;
+}
 }
