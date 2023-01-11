@@ -37,11 +37,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    width: 30%;
+    width: 50%;
     border: 1px solid black;
-    height: 50%;
     font-family: "Chivo mono";
-    padding: 10px;
+    padding: 30px;
     border-radius: 8px;
     font-size: 1.2rem;
     box-shadow: 2px 2px 5px black;
@@ -55,6 +54,18 @@
     cursor: pointer;
     box-shadow: 6px 6px 10px black;
 
+}
+
+.welcome-text h1{
+    padding-bottom: 40px;
+}
+
+.welcome-text h2{
+    padding-bottom: 30px;
+}
+
+.welcome-text p {
+    padding-bottom: 30px;
 }
 
 body {
