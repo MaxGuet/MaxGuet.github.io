@@ -173,7 +173,6 @@ tomateFarcie.addEventListener("click", () => {
   gateauY.style.display = "none";
   tomateF.style.display = " initial";
 });
-console.log(basboussa);
 
 riz.addEventListener("click", () => {
   entree.style.display = "none";

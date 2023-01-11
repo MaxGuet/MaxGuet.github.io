@@ -250,6 +250,11 @@ a:visited{
     padding-left: 30%;
 }
 
+.check-all{
+    text-decoration: underline;
+    text-transform:uppercase;
+}
+
 input:hover {
     cursor: pointer;
 }
@@ -340,6 +345,7 @@ font-size: 0.6rem;
         grid-template-columns: 1fr;
         background: url("./background.jpg") center/cover fixed;
         height: 100%;
+        padding-bottom: 100px;
     }
 
     .ingredients-left {

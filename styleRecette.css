@@ -169,20 +169,6 @@ h1 {
     text-shadow:2px 1px 8px #F8F8F9;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 button{
     position: absolute;
     top: 50%;
@@ -206,6 +192,23 @@ button:hover {
 
 @media screen and  (max-width: 800px) {
 
+    .main {
+        background: url(./backgroundRecette.jpg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        height: 100vh;
+        padding-bottom: 200px;
+        padding-top: 50px;
+        background-position-y: 60px;
+        object-fit: cover;
+        
+    }
+
+    header {
+        z-index: 10;
+    }
+
     body {
         height: 100%;
         width: 100%;
@@ -216,37 +219,75 @@ button:hover {
         align-items: center;
     }
 
+    nav {
+        z-index: 4;
+    }
+
     nav a {
         letter-spacing: 5px;
         font-size: 0.6rem;
         font-weight: 600;
         text-shadow: 1px 1px 1px rgb(0, 0, 0);
+        z-index: 5;
+    }
+
+    .menu{
+        margin-top: 5%;
+        max-height:200px;
+        min-height: 200px;
+    }
+
+    .menu h1 {
+        padding-bottom: 0;
+        padding-top: 5px;
+    }
+
+    .menu ul {
+        margin-top: 5px;
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
+
+    .list{
+        width: 80%;
+        height: 100%;
+        margin-top: 50px;
     }
 
 
-    h1 {
+   .list h1 {
         font-size: 1rem;
+        padding-bottom: 20px;
     }
 
 
 
     li {
+        z-index: 0;
         font-size: 1rem;
         line-height: 30px;
         text-decoration:overline;
         align-self: center;
         transition: 0.5s;
     }
-    .main{
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        height: 150vh;
+    
+    .recette {
+        min-height: 450px;
+        overflow-y: scroll;
+    }
+
+    .recette h1 {
         margin-bottom: 50px;
     }
-    .list{
-        width: 80%;
-        height: 100%;
 
+    .recette ul{
+        height: 100%;
+        padding-left: 10px;
+        padding-top: 50px;
     }
+
+    .recette {
+        
+    }
+
 }
