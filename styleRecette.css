@@ -169,20 +169,6 @@ h1 {
     text-shadow:2px 1px 8px #F8F8F9;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 button{
     position: absolute;
     top: 50%;
@@ -206,15 +192,27 @@ button:hover {
 
 @media screen and  (max-width: 800px) {
 
-    body {
-        height: 100%;
-        width: 100%;
-        overflow: visible;
+    .main {
+        background: url(./backgroundRecette.jpg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        height: 100vh;
+        padding-bottom: 200px;
+        padding-top: 50px;
+        background-position-y: 60px;
+        object-fit: cover;
+        
     }
+
+    header {
+        z-index: 10;
+    }
+
     .recNav{
         width: 100%;
         align-items: center;
-    }
+    } 
 
     nav a {
         letter-spacing: 5px;
@@ -224,29 +222,109 @@ button:hover {
     }
 
 
-    h1 {
-        font-size: 1rem;
-    }
-
-
-
     li {
+        z-index: 0;
         font-size: 1rem;
         line-height: 30px;
         text-decoration:overline;
         align-self: center;
         transition: 0.5s;
     }
-    .main{
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        height: 150vh;
-        margin-bottom: 50px;
+
+    .menu{
+        margin-top: 5%;
+        max-height:200px;
+        min-height: 200px;
     }
+
+    .menu h1 {
+        padding-bottom: 0;
+        padding-top: 5px;
+    }
+
+    .menu ul {
+        margin-top: 5px;
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
+
     .list{
         width: 80%;
         height: 100%;
-
+        margin-top: 50px;
     }
+
+
+   .list h1 {
+        font-size: 1rem;
+        padding-bottom: 20px;
+    }
+
+    .recette {
+        min-height: 450px;
+        overflow-y: scroll;
+        flex-direction: column;
+    }
+
+    .recette h1 {
+        margin-bottom: 50px;
+    }
+
+    .recette ul{
+        height: 100%;
+        padding-left: 10px;
+        padding-top: 50px;
+    }
+
+    .sdpR ul{
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .sdpR h1 {
+        margin-bottom: 0;
+    }
+
+    .tomMozza h1 {
+        margin-bottom: 0;
+    }
+
+    .sdr h1{
+        margin-bottom: 0;
+    }
+
+    .sdr ul{
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .risottoAs ul{
+        padding-top: 100px;
+    }
+
+    .hachisP ul {
+        padding-top: 100px;
+    }
+
+    .rizAL h1 {
+        margin-bottom: 0;
+    }
+
+.rizAL ul{
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.basboussa ul {
+    padding-top: 100px;
+}
+
+.gateauY h1{
+    margin: 0;
+}
+
+.gateauY ul {
+    padding-top: 0;
+    margin-top: 0;
+}
 }

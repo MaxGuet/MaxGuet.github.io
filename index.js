@@ -49,7 +49,7 @@ const mozzarella = document.querySelector("#mozzarella");
 const basilic = document.querySelector("#basilic");
 const mais = document.querySelector("#mais");
 const thon = document.querySelector("#thon");
-const receipeSuggestion = document.querySelector(".receipeSuggestion");
+// const receipeSuggestion = document.querySelector(".receipeSuggestion");
 const main = document.querySelector(".pres");
 const vanille = document.getElementById("vanille");
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
