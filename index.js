@@ -158,6 +158,15 @@ function toggle(name, id) {
   }
 }
 
+//**********FONCTION SCROLL UP WELCOME PAGE */
+
+let lastScroll = 0;
+
+window.onscroll = function (e) {
+  if (this.scrollY > lastScroll) {
+    welcome.style.top = "-1000px";
+  }
+};
 // ******FONCTION REMOVE CREATION OF THE SAME RECEIPE */
 function removeChild(parent) {
   while (parent.firstChild.id !== "receipe")
