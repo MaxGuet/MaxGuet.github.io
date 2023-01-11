@@ -49,11 +49,17 @@ const mozzarella = document.querySelector("#mozzarella");
 const basilic = document.querySelector("#basilic");
 const mais = document.querySelector("#mais");
 const thon = document.querySelector("#thon");
-// const receipeSuggestion = document.querySelector(".receipeSuggestion");
+const welcomeText = document.querySelector(".welcome-text");
+const welcome = document.querySelector(".welcome");
 const main = document.querySelector(".pres");
 const vanille = document.getElementById("vanille");
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
 
+welcomeText.addEventListener("click", () => {
+  welcome.style.top = "-1000px";
+});
+
+//******FUNCTION TOGGLE INGREDIENTS CATEGORIES */
 feculentBtn.addEventListener("click", () => {
   feculent.classList.toggle("ing-container-left-open");
   legume.classList.remove("ing-container-left-open");
