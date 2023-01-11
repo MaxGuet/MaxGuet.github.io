@@ -38,7 +38,7 @@
     justify-content: space-evenly;
     text-align: center;
     width: 50%;
-    border: 1px solid black;
+    border: 1px dashed black;
     font-family: "Chivo mono";
     padding: 30px;
     border-radius: 8px;
@@ -362,6 +362,31 @@ font-size: 0.6rem;
 }
 
 @media screen and (max-width: 800px) {
+
+
+    .welcome {
+        height: 100%;
+    }
+
+    .welcome-text{
+        height: 60%;
+    }
+
+    .welcome-text h1 {
+        font-size: 1.1rem;
+    }
+
+    .welcome-text h2 {
+        font-size: 1rem;
+    }
+
+    .welcome-text p {
+        display: none;
+    }
+
+    .welcome-text h4 {
+        display:none;
+    }
 
     body {
         width: 100%;

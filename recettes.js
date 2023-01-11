@@ -42,6 +42,7 @@ taboulet.addEventListener("click", () => {
   tabouletR.style.display = "initial";
   sdpR.style.display = "none";
   hachisP.style.display = "none";
+  pureeR.style.display = "none";
 });
 
 saladePatate.addEventListener("click", () => {
@@ -57,6 +58,7 @@ saladePatate.addEventListener("click", () => {
   basboussa.style.display = "none";
   sdpR.style.display = "initial";
   hachisP.style.display = "none";
+  pureeR.style.display = "none";
 });
 
 tomateMozza.addEventListener("click", () => {
@@ -72,6 +74,7 @@ tomateMozza.addEventListener("click", () => {
   gateauY.style.display = "none";
   tomMozza.style.display = "initial";
   hachisP.style.display = "none";
+  pureeR.style.display = "none";
 });
 
 saladeRiz.addEventListener("click", () => {
@@ -87,6 +90,7 @@ saladeRiz.addEventListener("click", () => {
   basboussa.style.display = "none";
   sdr.style.display = "initial";
   hachisP.style.display = "none";
+  pureeR.style.display = "none";
 });
 
 puree.addEventListener("click", () => {
