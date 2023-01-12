@@ -28,6 +28,7 @@ const rizAL = document.querySelector(".rizAL");
 const basboussa = document.querySelector(".basboussa");
 const gateauY = document.querySelector(".gateauY");
 const main = document.querySelector(".main");
+const welcome = document.querySelector(".welcome");
 
 taboulet.addEventListener("click", () => {
   plat.style.display = "none";

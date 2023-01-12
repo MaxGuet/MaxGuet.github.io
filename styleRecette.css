@@ -192,6 +192,9 @@ button:hover {
     box-shadow: 5px 5px 4px var(--brighter);
 }
 
+.recette ul {
+    justify-content: space-around;
+}
 
 @media screen and  (max-width: 800px) {
 
@@ -266,68 +269,12 @@ button:hover {
     .recette {
         min-height: 450px;
         overflow-y: scroll;
+        display: flex;
         flex-direction: column;
+        display: none
     }
 
-    .recette h1 {
-        margin-bottom: 50px;
+    .recette ul {
+        justify-content: start;
     }
-
-    .recette ul{
-        height: 100%;
-        padding-left: 10px;
-        padding-top: 50px;
-    }
-
-    .sdpR ul{
-        padding-top: 0;
-        margin-top: 0;
-    }
-
-    .sdpR h1 {
-        margin-bottom: 0;
-    }
-
-    .tomMozza h1 {
-        margin-bottom: 0;
-    }
-
-    .sdr h1{
-        margin-bottom: 0;
-    }
-
-    .sdr ul{
-        padding-top: 0;
-        margin-top: 0;
-    }
-
-    .risottoAs ul{
-        padding-top: 100px;
-    }
-
-    .hachisP ul {
-        padding-top: 100px;
-    }
-
-    .rizAL h1 {
-        margin-bottom: 0;
-    }
-
-.rizAL ul{
-    padding-top: 0;
-    margin-top: 0;
-}
-
-.basboussa ul {
-    padding-top: 100px;
-}
-
-.gateauY h1{
-    margin: 0;
-}
-
-.gateauY ul {
-    padding-top: 0;
-    margin-top: 0;
-}
 }
