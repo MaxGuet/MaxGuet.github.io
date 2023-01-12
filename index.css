@@ -162,6 +162,7 @@ a:visited{
     border: 1px solid var(--main-color);
     transition: 0.5s;
     z-index: 1;
+    text-transform: uppercase;
 }
 
 #receipe:hover {
