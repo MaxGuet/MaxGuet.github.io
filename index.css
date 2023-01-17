@@ -399,7 +399,7 @@ font-size: 0.6rem;
         width: 100%;
         display: flex;
         justify-content: space-evenly;
-        display: fixed;
+        display: block;
     }
 
     nav ul {
